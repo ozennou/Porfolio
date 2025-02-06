@@ -37,3 +37,20 @@
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
+
+/* Add this to your CSS file (e.g., styles.css or tailwind.css) */
+
+/* Define sliding animation for the entire icon container */
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%); /* Start off screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move completely off screen to the left */
+  }
+}
+
+/* Apply sliding animation to the container */
+.animate-slide-in {
+  animation: slide-left 10s linear infinite; /* Infinite, continuous scrolling */
+}
