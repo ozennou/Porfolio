@@ -6,6 +6,31 @@ import { AnimatedBackground } from 'animated-backgrounds';
 import Typewriter from 'typewriter-effect';
 // import './App.css'
 
+const projects = [
+  {
+    image: "/projects/diagram.png",
+    title: "DevSecOps-Pipeline",
+    desc: '- A learning project designed to understand how to develop a DevSecOps CI/CD pipeline using various technologies and tools such as GitLab CI, Snyk, Trivy, Terrascan, and more.',
+    gh_link: "https://gitlab.com/amineozennou/devsecops-pipeline",
+    stacks: ['Kubernetes', 'k3s', 'Docker', 'ArgoCD', 'Python', 'RabbitMQ']
+  },
+  {
+    image: "/projects/diagram.png",
+    title: "Microservices Architecture",
+    desc: '- A project to design and implement a microservices architecture using Spring Boot, Docker, and Kubernetes.',
+    gh_link: "https://gitlab.com/amineozennou/microservices-architecture",
+    stacks: ['Spring Boot', 'Docker', 'Kubernetes', 'MySQL']
+  },
+  {
+    image: "/projects/diagram.png",
+    title: "Data Analysis with Python",
+    desc: '- A project that focuses on data cleaning, exploration, and visualization using Python libraries like Pandas and Matplotlib.',
+    gh_link: "https://gitlab.com/amineozennou/data-analysis-python",
+    stacks: ['Python', 'Pandas', 'Matplotlib', 'Jupyter']
+  },
+  // You can add more project objects here
+];
+
 function App() {
   return (
     <div className="relative min-h-screen">
@@ -57,37 +82,12 @@ function App() {
                 <h1 className='font-extrabold text-xl md:text-4xl py-5'>Projects</h1>
                 <h1 className='font-extralight text-xl md:text-4xl'> Things I’ve built so far</h1>
               </div>
-              <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 place-items-center my-20'>
-                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
-pipeline using various technologies and tools such as GitLab CI,
-Snyk, Trivy, Terrascan, and more.'
-                      gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
-                    />
-                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
-pipeline using various technologies and tools such as GitLab CI,
-Snyk, Trivy, Terrascan, and more.'
-                      gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
-                    />
-                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
-pipeline using various technologies and tools such as GitLab CI,
-Snyk, Trivy, Terrascan, and more.'
-                      gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
-                    />
-                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
-pipeline using various technologies and tools such as GitLab CI,
-Snyk, Trivy, Terrascan, and more.'
-                      gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
-                    />
-                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
-pipeline using various technologies and tools such as GitLab CI,
-Snyk, Trivy, Terrascan, and more.'
-                      gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
-                    />
-                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
-pipeline using various technologies and tools such as GitLab CI,
-Snyk, Trivy, Terrascan, and more.'
-                      gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
-                    />
+              <div className='grid grid-cols-1 place-items-center my-20'>
+                {projects.map((project, index) => (
+                  <div className={`w-full flex ${index % 2 == 0 ? 'justify-start' : 'justify-end'}`}>
+                    <ProjectCard image={project.image} title={project.title} desc={project.desc} gh_link={project.gh_link} stacks={project.stacks} index={index}/>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

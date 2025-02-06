@@ -38,6 +38,29 @@
   mask-composite: exclude;
 }
 
+.gradient-border2 {
+  position: relative;
+  background: #363636; /* Or your desired background */
+  border-radius: 12px;
+}
+
+.gradient-border2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 3px; /* Border width */
+  background: linear-gradient(45deg, #E70FAA, #00C0FD);
+  border-radius: 12px;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
 /* Add this to your CSS file (e.g., styles.css or tailwind.css) */
 
 /* Define sliding animation for the entire icon container */

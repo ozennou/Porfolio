@@ -3,42 +3,47 @@ import React from 'react';
 interface ProjectCardProps {
     image: string;
     title: string;
-    description: string;
+    desc: string;
     gh_link: string;
-    stack: string;
     index: number;
+    stacks: string[];
   }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({image, title, description, gh_link, stack, index}) => {
-    if (index % 2 == 0) {
+const ProjectCard: React.FC<ProjectCardProps> = ({image, title, desc, gh_link, stacks, index}) => {
+    console.log(gh_link); 
+    // if (index % 2 == 0) {
         return (
-            <div className='w-88 bg-[#363636] rounded-3xl overflow-hidden shadow-md shadow-gray-300 hover:shadow-sm'>
-                <div className='m-1 rounded-3xl overflow-hidden'>
-                    <img src={image} alt={title} />
+            <div className='gradient-border2 m-8 xl:flex justify-center w-280'>
+                <div className='w-full'>
+                    <div className='relative mx-5 -mt-10 shadow-amber-50 shadow-sm'>
+                        <img src={image} alt={title}/>
+                    </div>
+                    <div className='flex flex-wrap justify-self-stretch my-6 ml-5 overflow-hidden'>
+                        {stacks.map((stack, index) => (
+                            <div key={index} className='bg-[#191919] rounded-2xl mx-2 my-1'>
+                                <p className='py-2 px-4 text-xs xl:text-sm'>{stack}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <div className='text-[#CCCCCC]'>
-                    <div className='m-6'>
+                <div className='flex flex-col'>
+                    <div className='mx-6 xl:m-6 flex-grow'>
                         <h1 className='font-extrabold text-3xl pb-5'>{title}</h1>
                         <div className='whitespace-pre-wrap text-lg break-all'>
-                            <p>{description}</p>
+                            <p>{desc}</p>
                         </div>
-                        <div className='mt-3'>
-                            <span className='text-[16px]'>Tech stack: </span> <span className='text-sm font-light'>{stack}</span>
-                        </div>
-                        <div className='mt-3'>
-
-                        </div>
+                    </div>
+                    <div className='flex flex-col items-end justify-end '>
+                        <a className='flex p-5' href={gh_link}>
+                            <img src="/assets/github2.svg" alt="github icon" />
+                            <p className='text-sm mx-2 font-light underline'>View Code</p>
+                        </a>
                     </div>
                 </div>
             </div>
         )
-    }
-    return (
-        <div>
-
-        </div>
-    )
-} 
+    // }
+}
 
 
 export default ProjectCard;
