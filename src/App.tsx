@@ -9,11 +9,11 @@ import Typewriter from 'typewriter-effect';
 function App() {
   return (
     <div className="relative min-h-screen">
-      <AnimatedBackground 
+      {/* <AnimatedBackground 
         animationName="quantumField" 
         blendMode="screen" 
-      />
-      <div className="relative z-10 min-h-screen w-full backdrop-blur-lg bg-gray-900/45">
+      /> */}
+      <div className="relative z-10 min-h-screen w-full  ">
         <div className="flex justify-center">
           <div className="w-full md:w-[70%]  ">
             <Header />
@@ -53,33 +53,37 @@ function App() {
               <div className='my-20'>
                 <Icons />
               </div>
-              <div className='grid grid-cols-1 sm:grid-cols-2  xl:grid-cols-3 gap-8 place-items-center '>
-                    <ProjectCard image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
+              <div className='grid grid-cols-1 place-items-center'>
+                <h1 className='font-extrabold text-xl md:text-4xl py-5'>Projects</h1>
+                <h1 className='font-extralight text-xl md:text-4xl'> Things I’ve built so far</h1>
+              </div>
+              <div className='grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 place-items-center my-20'>
+                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
 pipeline using various technologies and tools such as GitLab CI,
 Snyk, Trivy, Terrascan, and more.'
                       gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
                     />
-                    <ProjectCard image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
+                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
 pipeline using various technologies and tools such as GitLab CI,
 Snyk, Trivy, Terrascan, and more.'
                       gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
                     />
-                    <ProjectCard image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
+                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
 pipeline using various technologies and tools such as GitLab CI,
 Snyk, Trivy, Terrascan, and more.'
                       gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
                     />
-                    <ProjectCard image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
+                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
 pipeline using various technologies and tools such as GitLab CI,
 Snyk, Trivy, Terrascan, and more.'
                       gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
                     />
-                    <ProjectCard image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
+                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
 pipeline using various technologies and tools such as GitLab CI,
 Snyk, Trivy, Terrascan, and more.'
                       gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  
                     />
-                    <ProjectCard image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
+                    <ProjectCard stack='Kubernetes, k3s, Docker, Docker registry, ArgoCD, Python, RabbitMQ, PostgreSQL, Flask' image="/projects/diagram.png" title="DevSecOps-Pipeline" description='- A learning project designed to understand how to develop a DevSecOps CI/CD
 pipeline using various technologies and tools such as GitLab CI,
 Snyk, Trivy, Terrascan, and more.'
                       gh_link='https://gitlab.com/amineozennou/devsecops-pipeline' index={0}  

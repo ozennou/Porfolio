@@ -41,16 +41,31 @@
 /* Add this to your CSS file (e.g., styles.css or tailwind.css) */
 
 /* Define sliding animation for the entire icon container */
-@keyframes slide-left {
+
+
+/* Add the animation styles */
+/* Slide animation */
+@keyframes slide {
   0% {
-    transform: translateX(100%); /* Start off screen to the right */
+    transform: translateX(5%);
   }
   100% {
-    transform: translateX(-100%); /* Move completely off screen to the left */
+    transform: translateX(-90%);
   }
 }
 
-/* Apply sliding animation to the container */
-.animate-slide-in {
-  animation: slide-left 10s linear infinite; /* Infinite, continuous scrolling */
+.sliding-list {
+  display: flex;
+  animation: slide 60s linear infinite;
+  white-space: nowrap;
+}
+
+.sliding-list li {
+  flex: 0 0 auto; /* Prevents items from shrinking */
+  list-style-type: none;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
 }
