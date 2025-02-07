@@ -8,27 +8,38 @@ import Typewriter from 'typewriter-effect';
 
 const projects = [
   {
-    image: "/projects/diagram.png",
-    title: "DevSecOps-Pipeline",
-    desc: '- A learning project designed to understand how to develop a DevSecOps CI/CD pipeline using various technologies and tools such as GitLab CI, Snyk, Trivy, Terrascan, and more. ',
-    gh_link: "https://gitlab.com/amineozennou/devsecops-pipeline",
-    stacks: ['Kubernetes', 'k3s', 'Docker', 'ArgoCD', 'Python', 'RabbitMQ']
+    image: "/projects/code-guard.png",
+    title: "Code-Guard",
+    desc: '- Code-Guard is a project where I apply my skills in Infrastructure as code, Configuration management, building CI/CD pipelines and GitLab\\\
+    - This project sets up a self-hosted GitLab-EE on Azure using Terraform for IaC, configures GitLab-EE and Runner with Ansible, and develops a GitHub Actions pipeline to validate, scan for security risks, and manage Terraform and Ansible tasks',
+    gh_link: "https://github.com/ozennou/code-guard",
+    stacks: ['Azure', 'Ansible', 'GitLab', 'GitHub actions', 'Terraform']
   },
   {
     image: "/projects/diagram.png",
-    title: "Microservices Architecture",
-    desc: '- A project to design and implement a microservices architecture using Spring Boot, Docker, and Kubernetes.',
+    title: "Ping-Pong game",
+    desc: '- Full-stack web application where players can enjoy their time with the multiplayer Ping Pong game\\\
+    - In this project, we follow the Scrum methodology, breaking the work into various user stories and estimate the effort required for each user story\\\
+    - The tasks involved developing a real-time chat feature using Django WebSockets and implementing the ELK stack for centralized log management across all game components',
+    gh_link: "",
+    stacks: ['Django', 'Next.js', 'ELK Stack', 'Prometheus', 'Grafana']
+  },
+  {
+    image: "/projects/diagram.png",
+    title: "DevSecOps Pipeline",
+    desc: '- This project focuses on automating security testing, vulnerability scanning, code quality checks, and infrastructure-as-code (IaC) validation while ensuring continuous delivery with a strong emphasis on security-first practices\\\
+    - This project aims to integrate security early in the CI/CD pipeline (Shift-Left Security), automate security testing for applications and infrastructure, and provide hands-on experience with modern DevSecOps tools and practices',
     gh_link: "https://gitlab.com/amineozennou/microservices-architecture",
-    stacks: ['Spring Boot', 'Docker', 'Kubernetes', 'MySQL']
+    stacks: ['Azure', 'GitLab', 'Snyk', 'Terraform', 'Trivy', 'Terrascan']
   },
   {
     image: "/projects/diagram.png",
-    title: "Data Analysis with Python",
-    desc: '- A project that focuses on data cleaning, exploration, and visualization using Python libraries like Pandas and Matplotlib.',
-    gh_link: "https://gitlab.com/amineozennou/data-analysis-python",
-    stacks: ['Python', 'Pandas', 'Matplotlib', 'Jupyter']
+    title: "Orchestrator",
+    desc: '- Orchestrate a microservices architecture using Kubernetes build on top of K3S cluster, it includes a variety of services, such as databases, servers, and an API gateway, the application images for this project are derived from another project "CRUD-master-py".\\\
+    - Through this project, I have gained a thorough understanding of Kubernetes resources, including StatefulSets, services, deployments, Horizontal Pod Autoscalers (HPA), Persistent Volumes (PV), Persistent Volume Claims (PVC), and secrets.',
+    gh_link: "",
+    stacks: ['Django', 'Next.js', 'ELK Stack', 'Prometheus', 'Grafana']
   },
-  // You can add more project objects here
 ];
 
 function App() {
