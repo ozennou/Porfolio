@@ -4,7 +4,7 @@ const icons = [
   'Argo CD.png', 'django.png', 'gcp.png', 'k8s.png', 'redis.svg',
   'SonarQube.png', 'docker.svg', 'git.svg', 'mysql-original-wordmark.svg', 'snyk.png',
   'ansible.png', 'elastic.png', 'github0.svg', 'postgres.png', 'terraform.svg',
-  'Azure.png', 'file-type-nginx.svg', 'gitlab.png', 'python.png', 'trivy.svg',
+  'azure.png', 'file-type-nginx.svg', 'gitlab.png', 'python.png', 'trivy.png',
   'bash.svg', 'file-type-prometheus.svg', 'GitHub Actions.png', 'grafana.svg', 'rabbitmq.png', 'ts.png',
   'cpp.png',  'jenkins.svg', 'react.svg', 'vagrant.svg', 'tfsec.svg', 'Kibana.png'
 ];

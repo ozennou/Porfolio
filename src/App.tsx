@@ -10,7 +10,7 @@ const projects = [
   {
     image: "/projects/diagram.png",
     title: "DevSecOps-Pipeline",
-    desc: '- A learning project designed to understand how to develop a DevSecOps CI/CD pipeline using various technologies and tools such as GitLab CI, Snyk, Trivy, Terrascan, and more.',
+    desc: '- A learning project designed to understand how to develop a DevSecOps CI/CD pipeline using various technologies and tools such as GitLab CI, Snyk, Trivy, Terrascan, and more. ',
     gh_link: "https://gitlab.com/amineozennou/devsecops-pipeline",
     stacks: ['Kubernetes', 'k3s', 'Docker', 'ArgoCD', 'Python', 'RabbitMQ']
   },
@@ -82,7 +82,7 @@ function App() {
                 <h1 className='font-extrabold text-xl md:text-4xl py-5'>Projects</h1>
                 <h1 className='font-extralight text-xl md:text-4xl'> Things I’ve built so far</h1>
               </div>
-              <div className='grid grid-cols-1 place-items-center my-20'>
+              <div className='grid grid-cols-1 place-items-center '>
                 {projects.map((project, index) => (
                   <div className={`w-full flex ${index % 2 == 0 ? 'justify-start' : 'justify-end'}`}>
                     <ProjectCard image={project.image} title={project.title} desc={project.desc} gh_link={project.gh_link} stacks={project.stacks} index={index}/>
