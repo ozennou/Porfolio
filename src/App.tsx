@@ -3,7 +3,8 @@ import Header from './components/Header'
 import Icons from './components/Icons'
 import ProjectCard from './components/ProjectCard'
 import Typewriter from 'typewriter-effect';
-// import './App.css'
+// import ReactLoading from 'react-loading';
+import { useState, useEffect } from 'react';
 
 const projects = [
   {
@@ -50,6 +51,55 @@ const projects = [
 ];
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  const handleMediaLoad = () => {
+    setIsLoading(false);
+  };
+
+  useEffect(() => {
+    const images = document.querySelectorAll('img');
+    let totalImages = images.length;
+    let loadedImages = 0;
+
+    // If no images, mark as loaded
+    if (totalImages === 0) {
+      handleMediaLoad();
+      return;
+    }
+
+    images.forEach((image) => {
+      const checkIfImageLoaded = () => {
+        // If image is already loaded (cached), count it as loaded
+        if (image.complete) {
+          loadedImages += 1;
+          if (loadedImages === totalImages) {
+            handleMediaLoad();
+          }
+        } else {
+          // Add event listener for non-cached images
+          image.onload = () => {
+            loadedImages += 1;
+            if (loadedImages === totalImages) {
+              handleMediaLoad();
+            }
+          };
+        }
+      };
+
+      // Trigger the loading check
+      checkIfImageLoaded();
+    });
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className='w-full h-screen flex justify-center items-center'>
+        {/* <ReactLoading type="balls" color="#0095ff" height={'20%'} width={'20%'} /> */}
+      </div>
+    )
+  }
+
   return (
     <div className="relative min-h-screen">
       <div className="relative z-10 min-h-screen w-full  ">
