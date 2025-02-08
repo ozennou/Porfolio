@@ -69,7 +69,7 @@ function App() {
                   Hi 👋,
                   <br />
                   My name is
-                  <span className="ml-1 xl:ml-3 bg-gradient-to-r from-[#5AF2B2] via-[#2DC4D9] to-[#0095ff] text-transparent bg-clip-text">
+                  <span className="ml-1 xl:ml-3 bg-gradient-to-r from-[#0095ff] via-[#2DC4D9] to-[#5AF2B2] text-transparent bg-clip-text">
                     OZENNOU Mohamed Amine
                   </span>
                   <br />
