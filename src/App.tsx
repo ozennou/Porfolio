@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Header from './components/Header'
 import Icons from './components/Icons'
 import ProjectCard from './components/ProjectCard'
@@ -103,6 +104,7 @@ function App() {
                 ))}
               </div>
             </div>
+            <Footer />
           </div>
         </div>
       </div>
