@@ -73,9 +73,9 @@ function App() {
                     OZENNOU Mohamed Amine
                   </span>
                   <br />
-                  <div className="flex items-center gap-1">
-                    I'm <Typewriter options={{
-                      strings: [' Software engineer', ' DevOps engineer', ' Backend developer'],
+                  <div className="flex items-center gap-1 xl:gap-1.5">
+                    I'm  <Typewriter options={{
+                      strings: ['Software engineer', 'DevOps engineer', 'Backend developer'],
                       autoStart: true,
                       loop: true,
                       delay: 80,
