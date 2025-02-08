@@ -20,7 +20,7 @@ export default function Header() {
 
     const handleClick = () => {
         if (rotationDegree == 0) {
-            setRotationDegree(90);
+            setRotationDegree(-90);
         }
         else {
             setRotationDegree(0);
