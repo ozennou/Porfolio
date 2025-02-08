@@ -1,8 +1,6 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Icons from './components/Icons'
 import ProjectCard from './components/ProjectCard'
-import { AnimatedBackground } from 'animated-backgrounds';
 import Typewriter from 'typewriter-effect';
 // import './App.css'
 
@@ -16,7 +14,7 @@ const projects = [
     stacks: ['Azure', 'Ansible', 'GitLab', 'GitHub actions', 'Terraform']
   },
   {
-    image: "/projects/diagram.png",
+    image: "/projects/ping-pong.gif",
     title: "Ping-Pong game",
     desc: '- Full-stack web application where players can enjoy their time with the multiplayer Ping Pong game\\\
     - In this project, we follow the Scrum methodology, breaking the work into various user stories and estimate the effort required for each user story\\\
@@ -29,31 +27,35 @@ const projects = [
     title: "DevSecOps Pipeline",
     desc: '- This project focuses on automating security testing, vulnerability scanning, code quality checks, and infrastructure-as-code (IaC) validation while ensuring continuous delivery with a strong emphasis on security-first practices\\\
     - This project aims to integrate security early in the CI/CD pipeline (Shift-Left Security), automate security testing for applications and infrastructure, and provide hands-on experience with modern DevSecOps tools and practices',
-    gh_link: "https://gitlab.com/amineozennou/microservices-architecture",
+    gh_link: "https://gitlab.com/amineozennou/devsecops-pipeline",
     stacks: ['Azure', 'GitLab', 'Snyk', 'Terraform', 'Trivy', 'Terrascan']
   },
   {
-    image: "/projects/diagram.png",
+    image: "/projects/orchestrator.png",
     title: "Orchestrator",
     desc: '- Orchestrate a microservices architecture using Kubernetes build on top of K3S cluster, it includes a variety of services, such as databases, servers, and an API gateway, the application images for this project are derived from another project "CRUD-master-py".\\\
     - Through this project, I have gained a thorough understanding of Kubernetes resources, including StatefulSets, services, deployments, Horizontal Pod Autoscalers (HPA), Persistent Volumes (PV), Persistent Volume Claims (PVC), and secrets.',
-    gh_link: "",
-    stacks: ['Django', 'Next.js', 'ELK Stack', 'Prometheus', 'Grafana']
+    gh_link: "https://github.com/ozennou/Orchestrator",
+    stacks: ['RabbitMq', 'Flask', 'ArgoCD', 'Kubernetes', 'PostgreSQL']
+  },
+  {
+    image: "/projects/webserv.jpeg",
+    title: "WebServ",
+    desc: '- Implemented a C++98 compatible HTTP web server from scratch, handles methods like POST, GET, and DELETE, and can serve content based on a specific configuration from a conf file. It delivers static files and dynamic files using CGI and handles multiple client connections concurrently using I/O multiplexing.\\\
+    - Build a CI pipeline using GitHub Actions where we compile the server executable, and start a stress test using Siege to test the server\'s availability for multiple concurrent connections.',
+    gh_link: "https://github.com/ozennou/webserv-42",
+    stacks: ['C++', 'GitHub Actions', 'HTTP/1.1']
   },
 ];
 
 function App() {
   return (
     <div className="relative min-h-screen">
-      {/* <AnimatedBackground 
-        animationName="quantumField" 
-        blendMode="screen" 
-      /> */}
       <div className="relative z-10 min-h-screen w-full  ">
         <div className="flex justify-center">
           <div className="w-full md:w-[70%]  ">
             <Header />
-            <div className="py-20">
+            <div className="pb-20 xl:py-20">
               <div className="grid grid-cols-1 xl:grid-cols-2 place-items-center">
                 <div className="w-60 h-60 md:w-90 md:h-90 rounded-full mx-auto gradient-border overflow-hidden my-10">
                   <img 
@@ -62,11 +64,11 @@ function App() {
                     className="w-full h-full object-cover" 
                   />
                 </div>
-                <p className="font-extrabold text-sm md:text-2xl xl:text-4xl">
+                <p className="font-extrabold text-sm sm:text-xl md:text-2xl xl:text-4xl">
                   Hi 👋,
                   <br />
                   My name is
-                  <span className="xl:ml-3 bg-gradient-to-r from-[#E70FAA] via-pink-500 to-[#00C0FD] text-transparent bg-clip-text">
+                  <span className="ml-1 xl:ml-3 bg-gradient-to-r from-[#E70FAA] via-pink-500 to-[#00C0FD] text-transparent bg-clip-text">
                     OZENNOU Mohamed Amine
                   </span>
                   <br />
@@ -81,15 +83,15 @@ function App() {
                 </p>
               </div>
             </div>
-            <div className=''>
+            <div id='Stack'>
               <div className='grid grid-cols-1 place-items-center'>
                 <h1 className='font-extrabold text-xl md:text-4xl py-5'>My Tech Stack</h1>
-                <h1 className='font-extralight text-xl md:text-4xl'> Technologies I’ve been working with recently</h1>
+                <h1 className='font-extralight text-sm md:text-4xl '> Technologies I’ve been working with recently</h1>
               </div>
               <div className='my-20'>
                 <Icons />
               </div>
-              <div className='grid grid-cols-1 place-items-center'>
+              <div id='Projects' className='grid grid-cols-1 place-items-center'>
                 <h1 className='font-extrabold text-xl md:text-4xl py-5'>Projects</h1>
                 <h1 className='font-extralight text-xl md:text-4xl'> Things I’ve built so far</h1>
               </div>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 const icons = [
   'Argo CD.png', 'django.png', 'gcp.png', 'k8s.png', 'redis.svg',
   'SonarQube.png', 'docker.svg', 'git.svg', 'mysql-original-wordmark.svg', 'snyk.png',

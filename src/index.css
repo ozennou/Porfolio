@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -61,13 +65,39 @@
   mask-composite: exclude;
 }
 
-/* Add this to your CSS file (e.g., styles.css or tailwind.css) */
+/* Slide in from the right */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 
-/* Define sliding animation for the entire icon container */
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
 
+/* Apply the slide animation when 'click' is true */
+.slide-animation {
+  animation: slideIn 0.5s ease-in-out forwards;
+}
 
-/* Add the animation styles */
-/* Slide animation */
+/* Apply the slide-out animation when 'click' is false */
+.slide-animation-exit {
+  animation: slideOut 0.5s ease-in-out forwards;
+}
+
 @keyframes slide {
   0% {
     transform: translateX(5%);
