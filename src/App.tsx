@@ -59,9 +59,9 @@ function App() {
               <div className="grid grid-cols-1 xl:grid-cols-2 place-items-center">
                 <div className="w-60 h-60 md:w-90 md:h-90 rounded-full mx-auto gradient-border overflow-hidden my-10">
                   <img 
-                    src="/mozennou.jpeg" 
+                    src="https://cdn.intra.42.fr/users/5273e140d33f263aabc0ebbd03c2fd6a/mozennou.jpg" 
                     alt="ozennou image"
-                    className="w-full h-full object-cover" 
+                    className="w-full h-full object-cover object-top"
                   />
                 </div>
                 <p className="font-extrabold text-sm sm:text-xl md:text-2xl xl:text-4xl">
