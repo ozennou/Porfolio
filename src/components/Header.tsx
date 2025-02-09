@@ -37,29 +37,29 @@ export default function Header() {
     if (!isSmallScreen) {
         return (
             <div className="p-4 flex justify-between items-center">
-                <a href="/" className='w-1/2 xl:w-1/3 '>
+                <a href="/" className='w-1/2 xl:w-1/3 flex  items-center'>
                         <img src="/logo.png" alt="logo" width={200}/>
                 </a>
                 <div className="flex w-1/2 xl:w-2/3 font-bold">
                     <div className="hidden justify-end w-5/6 xl:flex">
-                        <a href="#About">
+                        <a className='flex justify-center items-center' href="#About">
                             <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">About</h1>
                         </a>
-                        <a href="#Stack">
+                        <a className='flex justify-center items-center' href="#Stack">
                             <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">Tech Stack</h1>
                         </a>
-                        <a href="#Projects">
+                        <a className='flex justify-center items-center' href="#Projects">
                             <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">Projects</h1>
                         </a>
-                        <a href="/resume.pdf" target="_blank">
+                        <a className='flex justify-center items-center' href="/resume.pdf" target="_blank">
                             <h1 className="px-5 hover:scale-110 hover:brightness-110 transition-all duration-300 ease-in-out gradient-border2 p-1 rounded-xl">Resume</h1>
                         </a>
                     </div>
-                    <div className="flex justify-end  w-full xl:w-1/6">
-                        <a href="https://github.com/ozennou">
+                    <div className="flex justify-end  w-full xl:w-1/6 ml-4">
+                        <a href="https://github.com/ozennou" className='flex items-center justify-center' target="_blank">
                             <img src="/assets/github.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt=""/>
                         </a>
-                        <a href="https://www.linkedin.com/in/ozennou/">
+                        <a href="https://www.linkedin.com/in/ozennou/" className='flex items-center justify-center' target="_blank">
                             <img src="/assets/linkedin.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt=""/>
                         </a>
                     </div>
@@ -78,10 +78,10 @@ export default function Header() {
             </div>
             <div className="flex w-1/2 xl:w-2/3 font-bold">
                 <div className="flex justify-end  w-full xl:w-1/6">
-                    <a href="https://github.com/ozennou">
+                    <a href="https://github.com/ozennou" className='flex items-center justify-center' target="_blank">
                         <img src="/assets/github.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt=""/>
                     </a>
-                    <a href="https://www.linkedin.com/in/ozennou/">
+                    <a href="https://www.linkedin.com/in/ozennou/" className='flex items-center justify-center' target="_blank">
                         <img src="/assets/linkedin.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt=""/>
                     </a>
                 </div>
@@ -89,16 +89,16 @@ export default function Header() {
         </div>
             { click &&
                 <div className={`justify-end w-40 xl:flex z-50 bg-[#363636] mx-2 absolute border-1 ${ !exitAnimation ? 'slide-animation' : 'slide-animation-exit' } p-1 rounded-2xl`}>
-                    <a href="#About" onClick={handleClick}>
+                    <a  href="#About" onClick={handleClick}>
                         <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">About</h1>
                     </a>
-                    <a href="#Stack" onClick={handleClick}>
+                    <a  href="#Stack" onClick={handleClick}>
                         <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">Tech Stack</h1>
                     </a>
-                    <a href="#Projects" onClick={handleClick}>
+                    <a  href="#Projects" onClick={handleClick}>
                         <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">Projects</h1>
                     </a>
-                    <a href="/resume.pdf" target="_blank" onClick={handleClick}>
+                    <a  href="/resume.pdf" target="_blank" onClick={handleClick}>
                         <h1 className="px-5 hover:scale-110 hover:brightness-110 transition-all duration-300 ease-in-out gradient-border2 p-1 rounded-2xl">Resume</h1>
                     </a>
                 </div>
