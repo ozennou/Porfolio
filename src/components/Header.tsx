@@ -69,7 +69,7 @@ export default function Header() {
     }
     return (
         <>
-        <div className="p-4 flex justify-between items-center">
+        <div className="pt-3 flex justify-between items-center">
             <div className="w-1/2 xl:w-1/3 px-4 cursor-pointer" >
                 <img src="/assets/more.svg" alt="more" className='transition-transform duration-300 ease-in-out' onClick={handleClick} style={{ transform: `rotate(${rotationDegree}deg)` }} width={35}/>
             </div>
