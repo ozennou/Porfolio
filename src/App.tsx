@@ -145,7 +145,7 @@ function App() {
             <div id="About">
               <div className='grid grid-cols-1 place-items-center mb-6 md:mb-16'>
                 <h1 className='font-extrabold text-xl md:text-4xl py-5'>About Me</h1>
-                <h1 className='font-light text-lg md:text-2xl w-[80%] md:w-2/3 leading-relaxed '>
+                <h1 className='font-light text-lg md:text-2xl w-[80%] md:w-2/3 leading-relaxed text-center'>
                   I am a motivated and driven student at 1337 Coding School, deeply passionate about computer science, problem-solving, and DevOps. With a strong focus on continuous learning, I aim to apply my skills to contribute to meaningful projects and evolve alongside the dynamic tech industry.
                 </h1>
               </div>
