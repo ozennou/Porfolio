@@ -114,7 +114,7 @@ function App() {
         <div className="flex justify-center">
           <div className="w-full md:w-[70%]">
             <Header />
-            <div className="pb-20 xl:py-20">
+            <div className="pb-6 md:pb-20 xl:py-20">
               <div className="grid grid-cols-1 xl:grid-cols-2 place-items-center">
                 <div className="w-60 h-60 md:w-90 md:h-90 rounded-full mx-auto gradient-border overflow-hidden my-10">
                   <img 
@@ -143,7 +143,7 @@ function App() {
               </div>
             </div>
             <div id="About">
-              <div className='grid grid-cols-1 place-items-center mb-16'>
+              <div className='grid grid-cols-1 place-items-center mb-6 md:mb-16'>
                 <h1 className='font-extrabold text-xl md:text-4xl py-5'>About Me</h1>
                 <h1 className='font-light text-lg md:text-2xl w-[80%] md:w-2/3 leading-relaxed '>
                   I am a motivated and driven student at 1337 Coding School, deeply passionate about computer science, problem-solving, and DevOps. With a strong focus on continuous learning, I aim to apply my skills to contribute to meaningful projects and evolve alongside the dynamic tech industry.
