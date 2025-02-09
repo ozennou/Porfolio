@@ -16,8 +16,16 @@ const projects = [
     stacks: ['Azure', 'Ansible', 'GitLab', 'GitHub actions', 'Terraform']
   },
   {
+    image: "/projects/ronda.gif",
+    title: "Ronda Game",
+    desc: '- This project involves the development of a Moroccan card game backend using Django with WebSockets for realtime multiplayer functionality.\\\
+    - The backend is deployed on Azure Kubernetes Service, and designing a CI/CD pipeline to automate the build and testing of the backend, the pipeline pushes the built Docker image to Docker Hub and triggers the deployment pipeline in a separate deployment repository.',
+    gh_link: "https://github.com/ozennou/ronda-dev",
+    stacks: ['React.js', 'Django', 'Kubernetes', 'Azure', 'GitHub Actions',]
+  },
+  {
     image: "/projects/ping-pong.gif",
-    title: "Ping-Pong game",
+    title: "Ping Pong Mania",
     desc: '- Full-stack web application where players can enjoy their time with the multiplayer Ping Pong game\\\
     - In this project, we follow the Scrum methodology, breaking the work into various user stories and estimate the effort required for each user story\\\
     - The tasks involved developing a real-time chat feature using Django WebSockets and implementing the ELK stack for centralized log management across all game components',
@@ -104,7 +112,7 @@ function App() {
     <div className="relative min-h-screen">
       <div className="relative z-10 min-h-screen w-full  ">
         <div className="flex justify-center">
-          <div className="w-full md:w-[70%]  ">
+          <div className="w-full md:w-[70%]">
             <Header />
             <div className="pb-20 xl:py-20">
               <div className="grid grid-cols-1 xl:grid-cols-2 place-items-center">
@@ -132,6 +140,14 @@ function App() {
                     }}/>
                   </div>
                 </p>
+              </div>
+            </div>
+            <div id="About">
+              <div className='grid grid-cols-1 place-items-center mb-16'>
+                <h1 className='font-extrabold text-xl md:text-4xl py-5'>About Me</h1>
+                <h1 className='font-light text-lg md:text-2xl w-[90%] md:w-2/3 leading-relaxed '>
+                  I am a motivated and driven student at 1337 Coding School, deeply passionate about computer science, problem-solving, and DevOps. With a strong focus on continuous learning, I aim to apply my skills to contribute to meaningful projects and evolve alongside the dynamic tech industry.
+                </h1>
               </div>
             </div>
             <div id='Stack'>

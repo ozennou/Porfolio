@@ -42,7 +42,7 @@ export default function Header() {
                 </a>
                 <div className="flex w-1/2 xl:w-2/3 font-bold">
                     <div className="hidden justify-end w-5/6 xl:flex">
-                        <a href="#">
+                        <a href="#About">
                             <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">About</h1>
                         </a>
                         <a href="#Stack">
@@ -89,7 +89,7 @@ export default function Header() {
         </div>
             { click &&
                 <div className={`justify-end w-40 xl:flex z-50 bg-[#363636] mx-2 absolute border-1 ${ !exitAnimation ? 'slide-animation' : 'slide-animation-exit' } p-1 rounded-2xl`}>
-                    <a href="#" onClick={handleClick}>
+                    <a href="#About" onClick={handleClick}>
                         <h1 className="px-5 hover:scale-115 hover:brightness-110 transition-all duration-300 ease-in-out p-1">About</h1>
                     </a>
                     <a href="#Stack" onClick={handleClick}>
