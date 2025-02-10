@@ -55,12 +55,15 @@ export default function Header() {
                             <h1 className="px-5 hover:scale-110 hover:brightness-110 transition-all duration-300 ease-in-out gradient-border2 p-1 rounded-xl">Resume</h1>
                         </a>
                     </div>
-                    <div className="flex justify-end  w-full xl:w-1/6 ml-4">
+                    <div className="flex justify-end  w-full xl:w-2/6">
                         <a href="https://github.com/ozennou" className='flex items-center justify-center' target="_blank">
-                            <img src="/assets/github.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt=""/>
+                            <img src="/assets/github.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt="" width={65}/>
                         </a>
                         <a href="https://www.linkedin.com/in/ozennou/" className='flex items-center justify-center' target="_blank">
-                            <img src="/assets/linkedin.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt=""/>
+                            <img src="/assets/linkedin.svg" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt="" width={65}/>
+                        </a>
+                        <a href="https://www.codewars.com/users/amineozennou" className='flex items-center justify-center' target="_blank">
+                            <img src="/assets/corewar.png" className="px-4 hover:scale-125 hover:brightness-110 transition-all duration-300 ease-in-out" alt="" width={65}/>
                         </a>
                     </div>
                 </div>
